@@ -1,0 +1,168 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:  "poppins", Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    width: 100%;
+    box-sizing: border-box;
+}
+.personel__globale{
+    background-color: rgba(24, 135, 9, 0.34);
+    width: 80%;
+    margin: auto;
+}
+.personel__header{
+    background-color: rgba(24, 135, 9, 0.34) ;
+}
+.personel__header a{
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    padding: 3rem;
+}
+
+.personel__header h1{
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    padding: 5%;
+}
+.personel__body{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 200px black;
+}
+.personelle_body_head{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.photo_pers{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(26, 25, 25);
+    color:rgb(26, 25, 25) ;
+    width: 20%;
+    margin: 2%;
+    height: 10rem;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.photo_pers i{
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    display: flex;
+}
+.fullname{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    width: 90%;
+    
+}
+.firstname , .lastname{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.lastname input , .firstname input{
+    height: 40px;
+    width: 80%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 10px;
+    color: rgb(82, 64, 49);
+    
+}
+.lastname label , .firstname label{
+    font-size: 20px;
+    color: rgb(82, 64, 49);
+    
+}
+.personelle_body_sh{
+    display: flex;
+    flex-direction: column;
+    padding:  5% 10% ;
+}
+.personelle_body_sh input{
+    height: 40px;
+    width: 80%;
+    margin: auto;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+    color: rgb(82, 64, 49);
+}
+.personelle_body_sh label{
+    font-size: 20px;
+    padding: 1%;
+    color: rgb(82, 64, 49);
+    width: 80%;
+    
+}
+.personel__bottom{
+    background-color: none;
+}
+/* progress */
+.steps{
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+.step{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: aliceblue;
+    color: rgb(82, 64, 49);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: background 0.3s;
+}
+.step.active{
+    background-color:rgb(5, 255, 5);
+    box-shadow: 0 0 20px rgb(5, 255, 5);
+    color: white;
+}
+.personel__bottom{
+    display: flex;
+    gap: 30px;
+    display: flex;
+    justify-content: center;
+}
+button{
+    padding: 16px;
+    border: none;
+    border-radius: 10px;
+    background-color: #4caf4c;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 0 20px black;
+    margin: 20px;
+    width: 30%;
+    transition: background 0.3s;
+}
+button:hover{
+    background-color: #4caf4c00;
+    box-shadow: 0 0 20px #4caf4c;
+    border: 0.3px solid #204d20;
+}
+button:disabled{
+    background-color: aliceblue;
+    cursor: not-allowed;
+    color: rgb(255, 0, 0);
+}
+
+
+/* progress */
