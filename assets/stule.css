@@ -9,12 +9,13 @@ body{
     box-sizing: border-box;
 }
 .personel__globale{
-    background-color: rgba(24, 135, 9, 0.34);
     width: 80%;
     margin: auto;
+    background-color: #9cd8dcce ; 
 }
 .personel__header{
-    background-color: rgba(24, 135, 9, 0.34) ;
+    background-color: #8db8b8 ;
+    margin-bottom: 20px;
 }
 .personel__header a{
     font-size: 2rem;
@@ -29,15 +30,23 @@ body{
     font-weight: 900;
     padding: 5%;
 }
-.personel__body{
+.education__body , .work__body , .peersonaleGL{
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 200px black;
+    border-radius: 12px;
 }
 .personelle_body_head{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    background-color: #8db8b8;
+}
+.personel__body  {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 200px black;
+
 }
 .photo_pers{
     display: flex;
@@ -86,12 +95,14 @@ body{
     color: rgb(82, 64, 49);
     
 }
-.personelle_body_sh{
+.personelle_body_sh , .education_body_sh , .work_body_sh{
     display: flex;
     flex-direction: column;
     padding:  5% 10% ;
+    background-color: #8db8b8;
+    border-radius: 20px;
 }
-.personelle_body_sh input{
+.personelle_body_sh input , .education_body_sh input , .work_body_sh input{
     height: 40px;
     width: 80%;
     margin: auto;
@@ -101,16 +112,14 @@ body{
     border: none;
     color: rgb(82, 64, 49);
 }
-.personelle_body_sh label{
+.personelle_body_sh label , .education_body_sh label, .work_body_sh label{
     font-size: 20px;
     padding: 1%;
     color: rgb(82, 64, 49);
     width: 80%;
     
 }
-.personel__bottom{
-    background-color: none;
-}
+
 /* progress */
 .steps{
     display: flex;
@@ -130,9 +139,12 @@ body{
     transition: background 0.3s;
 }
 .step.active{
-    background-color:rgb(5, 255, 5);
-    box-shadow: 0 0 20px rgb(5, 255, 5);
+    background-color:rgb(230, 255, 5);
+    box-shadow: 0 0 10px rgb(230, 255, 5);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .personel__bottom{
     display: flex;
@@ -144,7 +156,7 @@ button{
     padding: 16px;
     border: none;
     border-radius: 10px;
-    background-color: #4caf4c;
+    background-color: rgb(103, 200, 58);
     color: aliceblue;
     cursor: pointer;
     font-size: 20px;
@@ -153,9 +165,16 @@ button{
     width: 30%;
     transition: background 0.3s;
 }
+
+.savebtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
 button:hover{
     background-color: #4caf4c00;
-    box-shadow: 0 0 20px #4caf4c;
+    box-shadow: 0 0 20px rgba(230, 255, 5, 0.537);
     border: 0.3px solid #204d20;
 }
 button:disabled{
@@ -164,5 +183,74 @@ button:disabled{
     color: rgb(255, 0, 0);
 }
 
+.pageS {
+    display: none;
+   
+}
 
 /* progress */
+.page_step{
+    display: block;
+}
+.cv__body{
+    background-color: white;
+    height: 1123px;
+    width: 794px;
+    border: 0.1px solid black;
+    background: none ;
+    margin: auto;
+}
+.photoCv{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    gap: 30px;
+    border-bottom:1px solid black ;
+}
+.photoCv i{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+}
+.cv__body .des {
+    padding: 20px;
+    border-bottom:1px solid black ;
+}
+.donee__personl{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 30px;
+    border-bottom:1px solid black ;
+
+}
+.donee__personl p{
+    padding: 2px;
+}
+h3{
+    padding: 10px;
+    text-align: center;
+}
+.enseignement  {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 30px;
+    border-bottom:1px solid black ;
+}
+.enseignement p , .exprswork p{
+    padding: 2px;
+}
+.exprswork{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    gap: 30px;
+}
+.cvbackg{
+    background-color: white;
+}
+
