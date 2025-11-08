@@ -80,31 +80,32 @@ savebtn.addEventListener('click' , function() {
     btn++
     savebtn.disabled = btn === 1 ;
     let data_cv_pro = {
-        fname : frstname.Value ,
-        lname : lastname.value ,
-        eml : emaile.value ,
-        tele : telephone.value ,
-        adrs : adresse.value ,
-        vil : ville.value ,
-        daten : dtnaisan.value ,
-        linsn : lienais.value ,
-        ntion : nationale.value ,
-        prm : permis.value,
-        nomwrk : nomWORK.value ,
-        vilwork : villework.value ,
-        deparwrk : departwork.value ,
-        fnlwrk : finalework.value ,
-        cntra : contrat.value ,
-        descwrk : deswork.value ,
-        deplm : deplome.value ,
-        ecl : ecole.value ,
-        anescl : anneScool.value ,
-        vilscl : villescool.value , 
+        frstname : frstname.value.toLowerCase() ,
+        lastname : lastname.value.toLowerCase() ,
+        emaile : emaile.value.toLowerCase() ,
+        telephone : telephone.value.toLowerCase() ,
+        adresse : adresse.value.toLowerCase() ,
+        ville : ville.value.toLowerCase() ,
+        dtnaisan : dtnaisan.value.toLowerCase() ,
+        lienais : lienais.value.toLowerCase() ,
+        nationale : nationale.value.toLowerCase() ,
+        permis : permis.value.toLowerCase(),
+        nomWORK : nomWORK.value.toLowerCase() ,
+        villework : villework.value.toLowerCase() ,
+        departwork : departwork.value.toLowerCase() ,
+        finalework : finalework.value.toLowerCase() ,
+        contrat : contrat.value.toLowerCase() ,
+        deswork : deswork.value.toLowerCase() ,
+        deplome : deplome.value.toLowerCase() ,
+        ecole : ecole.value.toLowerCase() ,
+        anneScool : anneScool.value.toLowerCase() ,
+        villescool : villescool.value.toLowerCase() , 
     }
     data_cv.push(data_cv_pro)
     localStorage.setItem('cv' , JSON.stringify(data_cv));
+    affiche()
 
-                 frstname.Value = "" ;
+                 frstname.value = "" ;
                 lastname.value = "" ;
                  emaile.value = "" ;
                   telephone.value = "" ;
@@ -124,7 +125,92 @@ savebtn.addEventListener('click' , function() {
                 ecole.value = "" ;
                 anneScool.value = "" ;
                  villescool.value = "" ; 
+   
     
 })
+affiche();
 // *************************************afich*************************************************************************
 
+function affiche(){
+    let table_cv = '';
+    let espace = " " ;
+    for(let i = 0 ; i < data_cv.length ; i++){
+        table_cv += 
+                    `  <div class="cv__body">
+                                              <div class="photoCv">
+                                                         <i class="fa-solid fa-user"></i>
+                                                         <h1>${data_cv[i].frstname + espace + data_cv[i].lastname }</h1>
+                                              </div>
+                                              <p class="des">${data_cv[i].deswork}</p>
+                                              <div class="lighn-separ"></div>
+                                              <h3>information personelle</h3>
+                                              <div class="donee__personl">
+                                                          <div class="key-per">
+                                                                 <p>prenom</p>
+                                                                 <p>nom</p>
+                                                                 <p>email</p>
+                                                                 <p>telephone</p>
+                                                                 <p>adresse</p>
+                                                                 <p>ville</p>
+                                                                 <p>date de naissance</p>
+                                                                 <p>lieu de naissance</p>
+                                                                 <p>nationalite</p>
+                                                                 <p>type de permis</p>
+                                                          </div>
+                                                          <div class="value-per">
+                                                                 <p>${data_cv[i].frstname}</p>
+                                                                 <p>${data_cv[i].lastname}</p>
+                                                                 <p>${data_cv[i].emaile}</p>
+                                                                 <p>${data_cv[i].telephone}</p>
+                                                                 <p>${data_cv[i].adresse}</p>
+                                                                 <p>${data_cv[i].ville}</p>
+                                                                 <p>${data_cv[i].dtnaisan}</p>
+                                                                 <p>${data_cv[i].lienais}</p>
+                                                                 <p>${data_cv[i].nationale}</p>
+                                                                 <p>${data_cv[i].permis}</p>
+                                                          </div>
+                                              </div>
+                                              <div class="lighn-separ"></div>
+                                              <h3>enseignement</h3>
+                                              <div class="enseignement">
+                                                          <div class="ensign-s">
+                                                                      <p>nom de lecole</p>
+                                                                      <p>anne scolaire</p>
+                                                                      <p>deplome</p>
+                                                                      <p>la ville</p>
+                                                          </div>
+                                                          <div class="ensign-s">
+                                                                      <p>${data_cv[i].ecole}</p>
+                                                                      <p>${data_cv[i].anneScool}</p>
+                                                                      <p>${data_cv[i].deplome}</p>
+                                                                      <p>${data_cv[i].villescool}</p>
+                                                          </div>
+                                              </div>
+                                              <div class="lighn-separ"></div>
+                                              <h3>information profetionelle</h3>
+                                              <div class="exprswork">
+                                                           <div class="ensign-s">
+                                                                      <p>la periode</p>
+                                                                      <p>nom de societe</p>
+                                                                      <p>la ville de societe</p>
+                                                                      <p>type de contrat</p>
+                                                          </div>
+                                                          <div class="ensign-s">
+                                                                      <p>${data_cv[i].departwork}   ***  ${data_cv[i].finalework}</p>
+                                                                      <p>${data_cv[i].nomWORK}</p>
+                                                                      <p>${data_cv[i].villework}</p>
+                                                                      <p>${data_cv[i].contrat}</p>
+                                                          </div>
+                                              </div>
+                                                
+                                   </div>
+                                   <div class="cvbackgbtn">
+                                                              <button>updite</button>
+                                                                 <button>delete</button>
+                                                 </div>
+                                   `
+    }
+    console.log(table_cv)
+    document.getElementById('cvbackg').innerHTML = table_cv ;
+}
+affiche();

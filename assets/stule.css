@@ -2,7 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family:  "poppins", Georgia, Times, 'Times New Roman', serif;
+    font-family:   Times, 'Times New Roman', serif;
 }
 body{
     width: 100%;
@@ -156,13 +156,14 @@ button{
     padding: 16px;
     border: none;
     border-radius: 10px;
-    background-color: rgb(103, 200, 58);
-    color: aliceblue;
+    background-color: rgba(103, 200, 58, 0);
+    color: rgb(16, 42, 4);
     cursor: pointer;
     font-size: 20px;
-    box-shadow: 0 0 20px black;
+    box-shadow: 0 0 10px black;
     margin: 20px;
-    width: 30%;
+    height: 50px;
+    width: 10%;
     transition: background 0.3s;
 }
 
@@ -173,9 +174,10 @@ button{
     margin: auto;
 }
 button:hover{
-    background-color: #4caf4c00;
+    background-color: rgb(103, 200, 58);
     box-shadow: 0 0 20px rgba(230, 255, 5, 0.537);
     border: 0.3px solid #204d20;
+    color: #ffffff;
 }
 button:disabled{
     background-color: aliceblue;
@@ -194,18 +196,18 @@ button:disabled{
 }
 .cv__body{
     background-color: white;
-    height: 1123px;
+    /* height: 1123px; */
     width: 794px;
     border: 0.1px solid black;
     background: none ;
     margin: auto;
+    padding: 20px;
 }
 .photoCv{
     display: flex;
     align-items: center;
     padding: 20px;
     gap: 30px;
-    border-bottom:1px solid black ;
 }
 .photoCv i{
     width: 100px;
@@ -217,14 +219,12 @@ button:disabled{
 }
 .cv__body .des {
     padding: 20px;
-    border-bottom:1px solid black ;
 }
 .donee__personl{
     display: flex;
     justify-content: flex-start;
     padding: 20px;
     gap: 30px;
-    border-bottom:1px solid black ;
 
 }
 .donee__personl p{
@@ -239,7 +239,6 @@ h3{
     justify-content: flex-start;
     padding: 20px;
     gap: 30px;
-    border-bottom:1px solid black ;
 }
 .enseignement p , .exprswork p{
     padding: 2px;
@@ -252,5 +251,16 @@ h3{
 }
 .cvbackg{
     background-color: white;
+}
+.lighn-separ{
+    height: 0.2px;
+    background-color: black;
+    width: 70%;
+    margin: auto;
+}
+.cvbackgbtn{
+    display: flex;
+    margin: auto;
+    justify-content: center;
 }
 
